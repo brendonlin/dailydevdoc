@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../static/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#css" tabindex="1" class="md-skip">
+      <a href="#css" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -94,7 +94,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Daily Developing Guide (on construction)" class="md-header-nav__button md-logo">
+        <a href="../.." title="Daily Developing Guide (on construction)" aria-label="Daily Developing Guide (on construction)" class="md-header-nav__button md-logo">
           
             <i class="md-icon">cloud</i>
           
@@ -125,7 +125,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -456,6 +456,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../server/jekyll/" title="Jekyll" class="md-nav__link">
+      Jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../server/django/" title="Django" class="md-nav__link">
       Django
     </a>
@@ -671,8 +683,8 @@
                 <h1 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">&para;</a></h1>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Doc</a></p>
 <h2 id="layout">Layout<a class="headerlink" href="#layout" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nx">layout</span> <span class="o">=</span> <span class="nx">box</span> <span class="nx">model</span> <span class="o">+</span> <span class="nx">display</span> <span class="o">+</span> <span class="nx">position</span> <span class="o">+</span> <span class="kr">float</span><span class="o">/</span><span class="nx">clear</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nx">layout</span> <span class="o">=</span> <span class="nx">box</span> <span class="nx">model</span> <span class="o">+</span> <span class="nx">display</span> <span class="o">+</span> <span class="nx">position</span> <span class="o">+</span> <span class="kr">float</span><span class="o">/</span><span class="nx">clear</span>
+</code></pre></div>
 
 
 <h3 id="box-model">Box model<a class="headerlink" href="#box-model" title="Permanent link">&para;</a></h3>
@@ -684,37 +696,37 @@
 <p>Rule2</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span>element.width = content.width + element.padding + element.border + element.margin
-</pre></div>
+<div class="codehilite"><pre><span></span><code>element.width = content.width + element.padding + element.border + element.margin
+</code></pre></div>
 
 
 <ul>
 <li>Rule3</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">element</span><span class="o">.</span><span class="n">width</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">element</span><span class="o">.</span><span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">element</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">parentElement</span><span class="o">.</span><span class="n">width</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Rule4</li>
 </ul>
-<div class="codehilite"><pre><span></span>content.width = element.width - element.padding - element.border - element.margin
-</pre></div>
+<div class="codehilite"><pre><span></span><code>content.width = element.width - element.padding - element.border - element.margin
+</code></pre></div>
 
 
 <ul>
 <li>Rule5:</li>
 </ul>
-<div class="codehilite"><pre><span></span>width(css) != element.width
+<div class="codehilite"><pre><span></span><code>width(css) != element.width
 width(css) = content.width
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="display">Display<a class="headerlink" href="#display" title="Permanent link">&para;</a></h3>
 <h4 id="inline">inline<a class="headerlink" href="#inline" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span>&lt;a&gt;, &lt;span&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;, &lt;cite&gt;, &lt;mark&gt;, and &lt;code&gt;.
-</pre></div>
+<div class="codehilite"><pre><span></span><code>&lt;a&gt;, &lt;span&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;, &lt;cite&gt;, &lt;mark&gt;, and &lt;code&gt;.
+</code></pre></div>
 
 
 <ul>
@@ -727,8 +739,8 @@ width(css) = content.width
 <li>Except for <a> which can be placed on block-level elements, other inline elements cannot be placed on block-level elements.</li>
 </ul>
 <h4 id="block">block<a class="headerlink" href="#block" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span>&lt;div&gt;, &lt;p&gt;
-</pre></div>
+<div class="codehilite"><pre><span></span><code>&lt;div&gt;, &lt;p&gt;
+</code></pre></div>
 
 
 <ul>
@@ -748,7 +760,7 @@ width(css) = content.width
 <li>main axis align: <code>justify-content</code></li>
 <li>cross axis align: <code>align-items</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="c">/* Normal version */</span>
+<div class="codehilite"><pre><span></span><code><span class="c">/* Normal version */</span>
  <span class="p">{</span>
   <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
   <span class="c">/* flex-direction: row|row-reverse|column|column-reverse  */</span>
@@ -766,7 +778,7 @@ width(css) = content.width
   <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
   <span class="k">flex-flow</span><span class="p">:</span> <span class="kc">row</span> <span class="kc">wrap</span> <span class="kc">center</span> <span class="kc">center</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>For flex childItems:</p>
@@ -775,11 +787,11 @@ width(css) = content.width
 <li>flex-shrink: shrink size when sum(childItems.width) &lt; parentElement.width</li>
 <li>flex-basis: initial main size of a flex item(replace <code>witdth</code>)</li>
 </ul>
-<div class="codehilite"><pre><span></span>childItem.finalSize = flex-basi * flex-grow * flex-shrink
-</pre></div>
+<div class="codehilite"><pre><span></span><code>childItem.finalSize = flex-basi * flex-grow * flex-shrink
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><code> <span class="p">{</span>
   <span class="c">/* 0|1|2 */</span>
   <span class="k">flex-grow</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
   <span class="c">/* 0|1|2 */</span>
@@ -792,7 +804,7 @@ width(css) = content.width
  <span class="p">{</span>
   <span class="k">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">auto</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="position">Position<a class="headerlink" href="#position" title="Permanent link">&para;</a></h3>
@@ -804,6 +816,7 @@ width(css) = content.width
 <h3 id="float-and-clear">Float and clear<a class="headerlink" href="#float-and-clear" title="Permanent link">&para;</a></h3>
                 
                   
+                
                 
               
               
@@ -859,9 +872,9 @@ width(css) = content.width
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -871,7 +884,7 @@ width(css) = content.width
       
     </div>
     
-      <script src="../../assets/javascripts/application.c648116f.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

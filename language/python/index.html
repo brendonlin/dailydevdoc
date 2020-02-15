@@ -342,13 +342,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#distribution" class="md-nav__link">
-    Distribution
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#debug" class="md-nav__link">
     Debug
   </a>
@@ -366,6 +359,87 @@
           <li class="md-nav__item">
   <a href="#croniter-error-when-install-django" class="md-nav__link">
     Croniter error when install Django
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-complete-route-for-setup-is" class="md-nav__link">
+    A complete route for setup is:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-setuppy" class="md-nav__link">
+    Add setup.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-other-files" class="md-nav__link">
+    Add other files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-package" class="md-nav__link">
+    Build package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-package" class="md-nav__link">
+    Upload package
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argparse" class="md-nav__link">
+    Argparse
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-arguements-types" class="md-nav__link">
+    Command arguements types
   </a>
   
 </li>
@@ -766,13 +840,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#distribution" class="md-nav__link">
-    Distribution
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#debug" class="md-nav__link">
     Debug
   </a>
@@ -790,6 +857,87 @@
           <li class="md-nav__item">
   <a href="#croniter-error-when-install-django" class="md-nav__link">
     Croniter error when install Django
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-complete-route-for-setup-is" class="md-nav__link">
+    A complete route for setup is:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-setuppy" class="md-nav__link">
+    Add setup.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-other-files" class="md-nav__link">
+    Add other files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-package" class="md-nav__link">
+    Build package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-package" class="md-nav__link">
+    Upload package
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argparse" class="md-nav__link">
+    Argparse
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-arguements-types" class="md-nav__link">
+    Command arguements types
   </a>
   
 </li>
@@ -844,20 +992,20 @@ sudo apt-get install python3.6
 </code></pre></div>
 
 
-<p>Pip from image source(Persistence setting): </p>
+<p>Pip from image source(Persistence setting):</p>
 <ol>
-<li>edit $HOME/.pip/pip.conf(Unix) or %HOME%\pip\pip.ini(Windows)</li>
+<li>edit \$HOME/.pip/pip.conf(Unix) or %HOME%\pip\pip.ini(Windows)</li>
 <li>add</li>
 </ol>
 <div class="codehilite"><pre><span></span><code>[global]
 timeout = 6000
-index-url = http://pypi.douban.com/simple 
+index-url = http://pypi.douban.com/simple
 trusted-host = pypi.douban.com
 </code></pre></div>
 
 
 <h3 id="virtualenv">Virtualenv<a class="headerlink" href="#virtualenv" title="Permanent link">&para;</a></h3>
-<p>Create virtualenv  with specified version</p>
+<p>Create virtualenv with specified version</p>
 <div class="codehilite"><pre><span></span><code>virtualenv env -p /usr/bin/python3.7
 </code></pre></div>
 
@@ -913,8 +1061,8 @@ trusted-host = pypi.douban.com
 <h3 id="static-method-vs-class-method">Static method vs class method<a class="headerlink" href="#static-method-vs-class-method" title="Permanent link">&para;</a></h3>
 <p>Static method can be used before class init.</p>
 <h2 id="recommend-project-file-structure">Recommend Project File Structure<a class="headerlink" href="#recommend-project-file-structure" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>projectName 
-    projectName 
+<div class="codehilite"><pre><span></span><code>projectName
+    projectName
         assets
             database.db
         static
@@ -950,12 +1098,107 @@ readme.md
 <li>Script under every <code>components</code> is mutually independant.The common part should saved under common folder.</li>
 <li>Folder <code>assets</code> is Used to save various data.</li>
 </ol>
-<h2 id="distribution">Distribution<a class="headerlink" href="#distribution" title="Permanent link">&para;</a></h2>
 <h2 id="debug">Debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h2>
 <h3 id="microsoft-visual-c-140-is-required">Microsoft Visual C++ 14.0 is required<a class="headerlink" href="#microsoft-visual-c-140-is-required" title="Permanent link">&para;</a></h3>
 <p>visit <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml">https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml</a> and download compiled package</p>
 <h3 id="croniter-error-when-install-django">Croniter error when install Django<a class="headerlink" href="#croniter-error-when-install-django" title="Permanent link">&para;</a></h3>
 <p>Version 0.3.26 and 0.3.27 is not exists at croniter, modify version(like 0.3.28) at requirements.txt</p>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<p>Setup program is used for install at different enviroment and make it can be install by other peoples.</p>
+<p>The standard library for setup in Python is <code>setuptools</code>.</p>
+<h3 id="a-complete-route-for-setup-is">A complete route for setup is:<a class="headerlink" href="#a-complete-route-for-setup-is" title="Permanent link">&para;</a></h3>
+<h4 id="add-setuppy">Add setup.py<a class="headerlink" href="#add-setuppy" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Project information: name, version, author, author_email</li>
+<li>Assoiate packages:packages</li>
+<li>Entry points for commmand line tool:entry_points</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;package&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s2">&quot;Brendon Lin&quot;</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s2">&quot;brendon.lin@outlook.com&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Package for setup&quot;</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">(),</span>
+    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;loguru&gt;=0.4.1&quot;</span><span class="p">],</span>
+    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;console_scripts&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;runit = package.view:main&quot;</span><span class="p">]},</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<h4 id="add-other-files">Add other files<a class="headerlink" href="#add-other-files" title="Permanent link">&para;</a></h4>
+<ol>
+<li>introduce file: <code>Readme.md</code></li>
+<li>license file: <code>LICENSE</code>. The license can be selected from <a href="https://choosealicense.com/">Here</a>.</li>
+</ol>
+<h4 id="build-package">Build package<a class="headerlink" href="#build-package" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>pip install -U setuptools wheel
+python setup.py sdist bdist_wheel
+<span class="c1"># Then two file will found under `dist/`,with two file formats: tar.gz and wheel.The latter one being the more preferred format for the new pip.</span>
+</code></pre></div>
+
+
+<h4 id="upload-package">Upload package<a class="headerlink" href="#upload-package" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Regist account at pypi</li>
+<li>Install twine: <code>pip install twine</code></li>
+<li>Upload: <code>python -m twine upload dist/*</code></li>
+</ol>
+<h3 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h3>
+<p>Install by setup.py: <code>python setup.py install</code></p>
+<h2 id="argparse">Argparse<a class="headerlink" href="#argparse" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.python.org/3/library/argparse.html">Official Guide</a></li>
+<li><a href="https://docs.python.org/3/howto/argparse.html#id1">Official Tutrial</a></li>
+</ul>
+<p>Sample</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">argparse</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Process some integers.&#39;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;integers&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;+&#39;</span><span class="p">,</span>
+                    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;an integer for the accumulator&#39;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--sum&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;accumulate&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_const&#39;</span><span class="p">,</span>
+                    <span class="n">const</span><span class="o">=</span><span class="nb">sum</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="nb">max</span><span class="p">,</span>
+                    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;sum the integers (default: find the max)&#39;</span><span class="p">)</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">accumulate</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">integers</span><span class="p">))</span>
+</code></pre></div>
+
+
+<p>Parameter of add_argument:</p>
+<ul>
+<li>name or flags - Either a name or a list of option strings, e.g. foo or -f,--foo.</li>
+<li>action - The basic type of action to be taken when this argument is</li>
+<li>encountered at the command line.</li>
+<li>nargs - The number of command-line arguments that should be consumed.</li>
+<li>const - A constant value required by some action and nargs selections.</li>
+<li>default - The value produced if the argument is absent from the command line.</li>
+<li>type - The type to which the command-line argument should be converted.</li>
+<li>choices - A container of the allowable values for the argument.</li>
+<li>required - Whether or not the command-line option may be omitted (optionals
+  only).</li>
+<li>help - A brief description of what the argument does.</li>
+<li>metavar - A name for the argument in usage messages.</li>
+<li>dest - The name of the attribute to be added to the object returned by * parse_args().</li>
+</ul>
+<h3 id="command-arguements-types">Command arguements types<a class="headerlink" href="#command-arguements-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Positional arguments：required parameter, like normal param in function.</li>
+<li>Optional arguments：like keyword param in funciton，Use prefix with<code>--</code>or<code>-</code>.Default value is None。It is not the same as a placeholder parameter. If you write it, you must write the parameter name and then add the parameter value. If the expectation is to use no parameter value, just to represent a switch, you can use <code>action = "make_true"</code> to implement it.</li>
+<li>Short options：Simple version of optional parameters, just add an abbreviation symbol in front of the optional parameters</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Optional arguments</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--verbose&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;increase output verbosity&quot;</span><span class="p">)</span>
+<span class="c1"># Optional arguments not need argment value</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--verbose&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;increase output verbosity&quot;</span><span class="p">,</span>
+                    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+<span class="c1"># Optional arguments short version</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;-v&quot;</span><span class="p">,</span> <span class="s2">&quot;--verbose&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;increase output verbosity&quot;</span><span class="p">,</span>
+                    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+</code></pre></div>
                 
                   
                 

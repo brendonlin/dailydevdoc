@@ -518,40 +518,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#django-rest-framework" class="md-nav__link">
-    Django Rest framework
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install_1" class="md-nav__link">
-    Install
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-new-api" class="md-nav__link">
-    Create new API
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referral" class="md-nav__link">
-    Referral
-  </a>
-  
-</li>
-      
       
       
       
@@ -619,6 +585,18 @@
   <li class="md-nav__item">
     <a href="../streamlit/" title="Streamlit" class="md-nav__link">
       Streamlit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../restfulapi/" title="RestfulAPI" class="md-nav__link">
+      RestfulAPI
     </a>
   </li>
 
@@ -819,40 +797,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#django-rest-framework" class="md-nav__link">
-    Django Rest framework
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install_1" class="md-nav__link">
-    Install
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-new-api" class="md-nav__link">
-    Create new API
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referral" class="md-nav__link">
-    Referral
-  </a>
-  
-</li>
-      
       
       
       
@@ -884,8 +828,12 @@
 
 <h3 id="start-new-app">Start new app<a class="headerlink" href="#start-new-app" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Create new app folder: <code>python manage.py startapp {app name} {app path}</code></li>
-<li>Add app to <code>setting.py</code>: <code>setting.installed_apps</code></li>
+<li>
+<p>Create new app folder: <code>python manage.py startapp {app name} {app path}</code></p>
+</li>
+<li>
+<p>Add app to <code>setting.py</code>: <code>setting.installed_apps</code></p>
+</li>
 <li>
 <p>Create Model in <code>models.py</code></p>
 <div class="codehilite"><pre><span></span><code>from django.db import models
@@ -1101,61 +1049,6 @@ class Test1(TestCase):
 <p>Run test</p>
 <div class="codehilite"><pre><span></span><code>python manage.py test newapp
 </code></pre></div>
-
-
-<h2 id="django-rest-framework">Django Rest framework<a class="headerlink" href="#django-rest-framework" title="Permanent link">&para;</a></h2>
-<h3 id="install_1">Install<a class="headerlink" href="#install_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>pip install rest_framework
-</code></pre></div>
-
-
-<h3 id="create-new-api">Create new API<a class="headerlink" href="#create-new-api" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Create model as usual</li>
-<li>
-<p>Serialize Model</p>
-<div class="codehilite"><pre><span></span><code>from newapp.models import User
-from rest_framework import serializers
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        User = User
-        fields = (&#39;username&#39;, &#39;email&#39;)
-</code></pre></div>
-
-
-</li>
-<li>
-<p>Create API view</p>
-<div class="codehilite"><pre><span></span><code>from rest_framework import viewsets
-from newapp.models import User
-from newapp.serializers import UserSerializer
-
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all().order_by(&#39;-date_joined&#39;)
-    serializer_class = UserSerializer
-</code></pre></div>
-
-
-</li>
-<li>
-<p>Add urls</p>
-<div class="codehilite"><pre><span></span><code>from django.urls import include, path
-from rest_framework import routers
-from newapp import views
-
-router = routers.DefaultRouter()
-router.register(&#39;users&#39;, views.UserViewSet)
-</code></pre></div>
-
-
-</li>
-</ol>
-<h2 id="referral">Referral<a class="headerlink" href="#referral" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://docs.djangoproject.com">Django Document</a></li>
-<li><a href="https://www.django-rest-framework.org/tutorial/quickstart/">Django Rest framework quick start site</a></li>
-</ul>
                 
                   
                 

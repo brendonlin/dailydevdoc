@@ -36,7 +36,7 @@
     
     
       
-        <title>Data processing - Daily Developing Guide (on construction)</title>
+        <title>Altair - Daily Developing Guide (on construction)</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#data-processing" tabindex="0" class="md-skip">
+      <a href="#altair" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Data processing
+                Altair
               
             </span>
           
@@ -262,10 +262,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Library
@@ -283,7 +285,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../library/pytest/" title="Pytest" class="md-nav__link">
+    <a href="../pytest/" title="Pytest" class="md-nav__link">
       Pytest
     </a>
   </li>
@@ -295,7 +297,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../library/numpy/" title="Numpy" class="md-nav__link">
+    <a href="../numpy/" title="Numpy" class="md-nav__link">
       Numpy
     </a>
   </li>
@@ -307,7 +309,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../library/sklearn/" title="Sklearn" class="md-nav__link">
+    <a href="../sklearn/" title="Sklearn" class="md-nav__link">
       Sklearn
     </a>
   </li>
@@ -317,11 +319,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../library/altair/" title="Altair" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Altair
+      </label>
+    
+    <a href="./" title="Altair" class="md-nav__link md-nav__link--active">
       Altair
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#encoding" class="md-nav__link">
+    Encoding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chart-properties" class="md-nav__link">
+    Chart properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-chart-drawing" class="md-nav__link">
+    Multi-chart drawing
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -490,12 +544,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Data
@@ -511,111 +563,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Data processing
-      </label>
-    
-    <a href="./" title="Data processing" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../data/dataProcessing/" title="Data processing" class="md-nav__link">
       Data processing
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-goal" class="md-nav__link">
-    The goal
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-method" class="md-nav__link">
-    Common method
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specific-method" class="md-nav__link">
-    Specific method
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-log-transformation-to-process-nonlinear-data" class="md-nav__link">
-    Use log transformation to process nonlinear data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#avoid-predicting-past-target-variables-with-future-feature-variables-in-time-series-data" class="md-nav__link">
-    Avoid predicting past target variables with future feature variables  in time series data.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discretization-for-multimodal-distribution-variable" class="md-nav__link">
-    Discretization for multimodal distribution variable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#principal-component-analysis" class="md-nav__link">
-    Principal Component Analysis
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ptyhon-sklearn-processing-library-preprocessing" class="md-nav__link">
-    Ptyhon sklearn processing library: preprocessing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referral" class="md-nav__link">
-    Referral
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -625,7 +577,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../chart/" title="Chart" class="md-nav__link">
+    <a href="../../data/chart/" title="Chart" class="md-nav__link">
       Chart
     </a>
   </li>
@@ -657,70 +609,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-goal" class="md-nav__link">
-    The goal
+  <a href="#encoding" class="md-nav__link">
+    Encoding
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-method" class="md-nav__link">
-    Common method
+  <a href="#chart-properties" class="md-nav__link">
+    Chart properties
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#specific-method" class="md-nav__link">
-    Specific method
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#use-log-transformation-to-process-nonlinear-data" class="md-nav__link">
-    Use log transformation to process nonlinear data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#avoid-predicting-past-target-variables-with-future-feature-variables-in-time-series-data" class="md-nav__link">
-    Avoid predicting past target variables with future feature variables  in time series data.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discretization-for-multimodal-distribution-variable" class="md-nav__link">
-    Discretization for multimodal distribution variable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#principal-component-analysis" class="md-nav__link">
-    Principal Component Analysis
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ptyhon-sklearn-processing-library-preprocessing" class="md-nav__link">
-    Ptyhon sklearn processing library: preprocessing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referral" class="md-nav__link">
-    Referral
+  <a href="#multi-chart-drawing" class="md-nav__link">
+    Multi-chart drawing
   </a>
   
 </li>
@@ -742,29 +646,76 @@
               
                 
                 
-                <h1 id="data-processing">Data processing<a class="headerlink" href="#data-processing" title="Permanent link">&para;</a></h1>
-<h2 id="the-goal">The goal<a class="headerlink" href="#the-goal" title="Permanent link">&para;</a></h2>
-<p>Convert the data close to nature, and make more convenient for human  and computer to understand the data.</p>
-<h2 id="common-method">Common method<a class="headerlink" href="#common-method" title="Permanent link">&para;</a></h2>
+                <h1 id="altair">Altair<a class="headerlink" href="#altair" title="Permanent link">&para;</a></h1>
+<p>Sample</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+                     <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">]})</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x:O&#39;</span><span class="p">,</span>  <span class="c1"># specify ordinal data</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y:Q&#39;</span><span class="p">,</span>  <span class="c1"># specify quantitative data</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Altair’s grammar works best with long-form data, in which each row corresponds to a single observation along with its metadata</p>
+<h2 id="encoding">Encoding<a class="headerlink" href="#encoding" title="Permanent link">&para;</a></h2>
+<p><a href="https://altair-viz.github.io/user_guide/encoding.html">Encoding</a></p>
+<p>Encoding Channels:</p>
 <ul>
-<li>Data cleaning: process the missing value and wrong data</li>
-<li>Data integration: intergate data from multiple sources.</li>
-<li>Data reduction: vector reduction and value reduction</li>
-<li>Data transformation: standardization, log transformation, discretization</li>
-<li>Data mixing: reduce the problem caused by data order</li>
+<li>Position Channels: x,y,x2,y2</li>
+<li>Mark Property Channels: color,fillopacity,size,shape</li>
+<li>Text and Tooltip Channels: text</li>
+<li>Hyperlink Channel: href</li>
+<li>Level of Detail Channel: detail</li>
+<li>Order Channel: order</li>
+<li>Facet Channels: column, row</li>
 </ul>
-<h2 id="specific-method">Specific method<a class="headerlink" href="#specific-method" title="Permanent link">&para;</a></h2>
-<h3 id="use-log-transformation-to-process-nonlinear-data">Use log transformation to process nonlinear data<a class="headerlink" href="#use-log-transformation-to-process-nonlinear-data" title="Permanent link">&para;</a></h3>
-<p>In addition, there are power transformation, negative transformation and root transformation, all of which are data transformations.</p>
-<p>Log transformation is useful to conver many data multiply to add, which avoid influence of value close to 0. And it is convenient to calculate. </p>
-<p>If you need make 2 and 0.5 has a equal range from 1, using natural logarithm "e" will get a result of 0.69 and -0.69.</p>
-<h3 id="avoid-predicting-past-target-variables-with-future-feature-variables-in-time-series-data">Avoid predicting past target variables with future feature variables  in time series data.<a class="headerlink" href="#avoid-predicting-past-target-variables-with-future-feature-variables-in-time-series-data" title="Permanent link">&para;</a></h3>
-<h3 id="discretization-for-multimodal-distribution-variable">Discretization for multimodal distribution variable<a class="headerlink" href="#discretization-for-multimodal-distribution-variable" title="Permanent link">&para;</a></h3>
-<h3 id="principal-component-analysis">Principal Component Analysis<a class="headerlink" href="#principal-component-analysis" title="Permanent link">&para;</a></h3>
-<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<h2 id="ptyhon-sklearn-processing-library-preprocessing">Ptyhon sklearn processing library: preprocessing<a class="headerlink" href="#ptyhon-sklearn-processing-library-preprocessing" title="Permanent link">&para;</a></h2>
-<h2 id="referral">Referral<a class="headerlink" href="#referral" title="Permanent link">&para;</a></h2>
-<p>[Data Mining Concepts and Techiques]</p>
+<p>And some encoding can detailed defined by using options ,like:</p>
+<ul>
+<li><code>alt.X("xx",aggregate="sum")</code> == <code>x="sum(xx)"</code></li>
+<li><code>alt.X("xx",bin=True)</code></li>
+</ul>
+<p>Two gramma to define encoding:</p>
+<ul>
+<li><code>x="name:Q"</code></li>
+<li><code>alt.X('name', type='quantitative')</code></li>
+</ul>
+<p>Support binning and aggregation like in database.For example</p>
+<div class="codehilite"><pre><span></span><code><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Horsepower&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Miles_per_Gallon&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">size</span><span class="o">=</span><span class="s1">&#39;count()&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Different data properties will make color represent in different ways</p>
+<div class="codehilite"><pre><span></span><code><span class="n">base</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Horsepower:Q&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Miles_per_Gallon:Q&#39;</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">150</span>
+<span class="p">)</span>
+
+<span class="n">alt</span><span class="o">.</span><span class="n">vconcat</span><span class="p">(</span>
+   <span class="n">base</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;Cylinders:Q&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">),</span>
+   <span class="n">base</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;Cylinders:O&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;ordinal&#39;</span><span class="p">),</span>
+   <span class="n">base</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;Cylinders:N&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;nominal&#39;</span><span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="chart-properties">Chart properties<a class="headerlink" href="#chart-properties" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">chart</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="multi-chart-drawing">Multi-chart drawing<a class="headerlink" href="#multi-chart-drawing" title="Permanent link">&para;</a></h2>
+<p><code>alt.concat()</code> and <code>alt.vconcat()</code></p>
                 
                   
                 
@@ -786,7 +737,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../server/restfulapi/" title="RestfulAPI" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../sklearn/" title="Sklearn" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -795,19 +746,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                RestfulAPI
+                Sklearn
               </span>
             </div>
           </a>
         
         
-          <a href="../chart/" title="Chart" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../server/nginx/" title="Nginx" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Chart
+                Nginx
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

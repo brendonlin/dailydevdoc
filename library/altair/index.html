@@ -309,6 +309,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../pandas/" title="Pandas" class="md-nav__link">
+      Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../sklearn/" title="Sklearn" class="md-nav__link">
       Sklearn
     </a>
@@ -350,6 +362,47 @@
         <li class="md-nav__item">
   <a href="#encoding" class="md-nav__link">
     Encoding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mark" class="md-nav__link">
+    mark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactiveselection" class="md-nav__link">
+    Interactive:Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-level-chart-configuration" class="md-nav__link">
+    Top-Level Chart Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compound-charts" class="md-nav__link">
+    Compound Charts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    Save
   </a>
   
 </li>
@@ -616,6 +669,47 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mark" class="md-nav__link">
+    mark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactiveselection" class="md-nav__link">
+    Interactive:Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-level-chart-configuration" class="md-nav__link">
+    Top-Level Chart Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compound-charts" class="md-nav__link">
+    Compound Charts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    Save
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#chart-properties" class="md-nav__link">
     Chart properties
   </a>
@@ -709,6 +803,132 @@
 </code></pre></div>
 
 
+<h2 id="mark">mark<a class="headerlink" href="#mark" title="Permanent link">&para;</a></h2>
+<p>Commonly used mark:</p>
+<ul>
+<li>mark_line</li>
+<li>mark_bar</li>
+<li>mark_circle</li>
+<li>mark_point</li>
+<li>mark_rect</li>
+</ul>
+<p>Mark supports add attributes.</p>
+<h2 id="interactiveselection">Interactive:Selection<a class="headerlink" href="#interactiveselection" title="Permanent link">&para;</a></h2>
+<p>When selection is added to chart, <code>alt.condition</code> will make changes based on events</p>
+<p>Three type selection:</p>
+<ul>
+<li><code>alt.selection_interval</code></li>
+<li><code>alt.selection_single</code></li>
+<li><code>alt.selection_multi</code></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="n">brush</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_interval</span><span class="p">(</span><span class="n">encodings</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
+
+<span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Horsepower:Q&#39;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">brush</span><span class="p">,</span> <span class="s1">&#39;Origin:N&#39;</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">250</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+    <span class="n">brush</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Selection can set fields to make selection at legend of chart.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Origin&#39;</span><span class="p">])</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span>
+                      <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Origin:N&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
+                      <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>
+
+<span class="n">scatter</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Horsepower:Q&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Miles_per_Gallon:Q&#39;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="s1">&#39;Name:N&#39;</span>
+<span class="p">)</span>
+
+<span class="n">legend</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Origin:N&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">color</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+    <span class="n">selection</span>
+<span class="p">)</span>
+
+<span class="n">scatter</span> <span class="o">|</span> <span class="n">legend</span>
+</code></pre></div>
+
+
+<p>Use <code>bind</code> to mark a form input</p>
+<div class="codehilite"><pre><span></span><code><span class="n">selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Origin&#39;</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="n">input_dropdown</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Country of &#39;</span><span class="p">)</span>
+
+<span class="c1"># or</span>
+
+<span class="n">slider</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">binding_range</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;cutoff:&#39;</span><span class="p">)</span>
+<span class="n">selector</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;SelectorName&quot;</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cutoff&#39;</span><span class="p">],</span>
+                                <span class="n">bind</span><span class="o">=</span><span class="n">slider</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cutoff&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">})</span>
+</code></pre></div>
+
+
+<h2 id="top-level-chart-configuration">Top-Level Chart Configuration<a class="headerlink" href="#top-level-chart-configuration" title="Permanent link">&para;</a></h2>
+<p><a href="https://altair-viz.github.io/user_guide/configuration.html">doc</a></p>
+<h3 id="compound-charts">Compound Charts<a class="headerlink" href="#compound-charts" title="Permanent link">&para;</a></h3>
+<p>Layer, HConcat, VConcat, Repeat, Facet</p>
+<p>For example</p>
+<div class="codehilite"><pre><span></span><code><span class="n">chart</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Acceleration:Q&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="n">chart</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Miles_per_Gallon:Q&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Repeat can draw chart repeatly with some element different</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">from</span> <span class="nn">vega_datasets</span> <span class="kn">import</span> <span class="n">data</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iris</span><span class="o">.</span><span class="n">url</span>
+
+<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;column&quot;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;row&quot;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;species:N&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">200</span>
+<span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+    <span class="n">row</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;petalLength&#39;</span><span class="p">,</span> <span class="s1">&#39;petalWidth&#39;</span><span class="p">],</span>
+    <span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sepalLength&#39;</span><span class="p">,</span> <span class="s1">&#39;sepalWidth&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Facet can draw chart divided by some class</p>
+<div class="codehilite"><pre><span></span><code><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;petalLength:Q&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;petalWidth:Q&#39;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;species:N&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">180</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">180</span>
+<span class="p">)</span><span class="o">.</span><span class="n">facet</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;species:N&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Resolve scale can make compound Charts with different legend.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">alt</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;Origin:N&#39;</span><span class="p">),</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;Cylinders:O&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">resolve_scale</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;independent&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="save">Save<a class="headerlink" href="#save" title="Permanent link">&para;</a></h2>
+<p>If you save the picture, you need to install selenium and browserdriver</p>
+<div class="codehilite"><pre><span></span><code>chart.save(&#39;chart.png&#39;)
+</code></pre></div>
+
+
+<p>Json and html is also supported.</p>
 <h2 id="chart-properties">Chart properties<a class="headerlink" href="#chart-properties" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="n">chart</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
 </code></pre></div>

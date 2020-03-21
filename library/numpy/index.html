@@ -321,14 +321,42 @@
       
         <li class="md-nav__item">
   <a href="#index" class="md-nav__link">
-    index
+    Index
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#numpyrandom" class="md-nav__link">
-    numpy.random
+  <a href="#ndarray" class="md-nav__link">
+    Ndarray
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix" class="md-nav__link">
+    Matrix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random" class="md-nav__link">
+    Random
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refferal" class="md-nav__link">
+    Refferal
   </a>
   
 </li>
@@ -341,6 +369,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pandas/" title="Pandas" class="md-nav__link">
+      Pandas
+    </a>
   </li>
 
         
@@ -597,14 +637,42 @@
       
         <li class="md-nav__item">
   <a href="#index" class="md-nav__link">
-    index
+    Index
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#numpyrandom" class="md-nav__link">
-    numpy.random
+  <a href="#ndarray" class="md-nav__link">
+    Ndarray
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix" class="md-nav__link">
+    Matrix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random" class="md-nav__link">
+    Random
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refferal" class="md-nav__link">
+    Refferal
   </a>
   
 </li>
@@ -628,28 +696,126 @@
                 
                   <h1>Numpy</h1>
                 
-                <h2 id="index">index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h2>
+                <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="#index">index</a></li>
-<li><a href="#numpyrandom">numpy.random</a></li>
+<li><a href="#index">Index</a></li>
+<li><a href="#ndarray">Ndarray</a></li>
+<li><a href="#matrix">Matrix</a></li>
+<li><a href="#random">Random</a></li>
+<li><a href="#tips">Tips</a></li>
+<li><a href="#refferal">Refferal</a></li>
 </ul>
-<h2 id="numpyrandom">numpy.random<a class="headerlink" href="#numpyrandom" title="Permanent link">&para;</a></h2>
+<h2 id="ndarray">Ndarray<a class="headerlink" href="#ndarray" title="Permanent link">&para;</a></h2>
+<p><a href="https://numpy.org/doc/1.18/reference/arrays.ndarray.html">ndarray</a></p>
+<p>Build a ndarray</p>
+<div class="codehilite"><pre><span></span><code><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;12345&quot;</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># linner space</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">stop</span><span class="p">,</span><span class="n">num</span><span class="p">)</span>
+<span class="c1"># mesh grid</span>
+<span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span><span class="n">arr2</span><span class="p">)</span>
+
+<span class="c1"># generate data from raw text</span>
+<span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Convert type</p>
+<div class="codehilite"><pre><span></span><code>arr.astyple(&quot;float&quot;)
+</code></pre></div>
+
+
+<p>Conver shape</p>
+<div class="codehilite"><pre><span></span><code>arr.flatten()
+arr.ravel()
+</code></pre></div>
+
+
+<!-- 通过位置创建：np.where(AA<5,5,AA) -->
+
+<p>Combine array</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># combine by row</span>
+<span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">arr1</span><span class="p">,</span><span class="n">arr2</span><span class="p">])</span>
+<span class="c1"># or</span>
+<span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">arr1</span><span class="p">,</span><span class="n">arr2</span><span class="p">]</span>
+
+<span class="c1"># combine by col</span>
+<span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">arr1</span><span class="p">,</span><span class="n">arr2</span><span class="p">])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">arr1</span><span class="p">,</span><span class="n">arr2</span><span class="p">]</span>
+
+<span class="c1"># combine with new level</span>
+<span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">[</span><span class="n">arr1</span><span class="p">,</span><span class="n">arr2</span><span class="p">]</span>
+
+<span class="c1"># combine to one dimension</span>
+<span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Arr1</span><span class="p">,</span><span class="n">Arr2</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Compare between ndarray</p>
+<div class="codehilite"><pre><span></span><code><span class="n">np</span><span class="o">.</span><span class="n">in1d</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span>
+<span class="n">union1d</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span>
+<span class="n">setdiff1d</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>取唯一值：np.unique(ints)等价于 sorted（set（AA））</p>
+<p>选取非零元素的位置，可以和逻辑判断结合使用：np.nonzero(Arr)</p>
+<h2 id="matrix">Matrix<a class="headerlink" href="#matrix" title="Permanent link">&para;</a></h2>
+<p>Ndarray as matrix</p>
+<div class="codehilite"><pre><span></span><code># martix dot
+arr1 @ arr2
+# or
+arr1.dot(arr2)
+</code></pre></div>
+
+
+<p>Matrix</p>
+<div class="codehilite"><pre><span></span><code># ndarray convert to matrix
+np.mat(arr)
+
+# matrix convert to ndarray
+mat.A
+
+# transpose
+arr.transpose(`
+# or
+arr.T
+
+# ${n}\times{n}$ eye matrix
+
+np.eye(n)
+
+# inverse matrix
+mat.I
+</code></pre></div>
+
+
+<h2 id="random">Random<a class="headerlink" href="#random" title="Permanent link">&para;</a></h2>
+<p>Random number:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Evenly distributed float number in range [0,1] :</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">d0</span><span class="p">,</span> <span class="n">d1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">dn</span><span class="p">)</span>
+<span class="c1"># Evenly distributed integer number:</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="c1"># Binomial distribution:</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="c1"># Normal distribution:</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="c1"># Standard normal distribution:</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">d0</span><span class="p">,</span> <span class="n">d1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">dn</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Others</p>
 <ol>
-<li>
-<p>Varout random number:</p>
-</li>
-<li>
-<p>Evenly distributed float number in range [0,1] :<code>rand(d0, d1, ..., dn)</code></p>
-</li>
-<li>Evenly distributed integer number:<code>randint(low, high=None, size=None)</code></li>
-<li>Binomial distribution:<code>binomial(n, p, size=None)</code></li>
-<li>Normal distribution:<code>normal(loc=0.0, scale=1.0, size=None)</code></li>
-<li>
-<p>Standard normal distribution:<code>randn(d0, d1, ..., dn)</code></p>
-</li>
-<li>
-<p>Choose one:<code>choice(a, size=None, replace=True, p=None)</code></p>
-</li>
+<li>Choose one:<code>choice(a, size=None, replace=True, p=None)</code></li>
 <li>Random permutation of sequences (without modifying objects):<code>permutation(x)</code></li>
 <li>Random permutation of sequences (with modifying objects):<code>shuffle(x)</code></li>
 <li>Random replacement sampling:<code>[AA[x] for x in np.random.randint(0,3,10)]</code></li>
@@ -657,6 +823,13 @@
 <li>Generate random numbers between -1 and 1:<code>rand([0,1])*2-1</code></li>
 <li>Random control flow condition: `np.rand() &gt; 0.6'</li>
 </ol>
+<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li>0 is represent row and 1 is column. when <code>axis=0</code> row will be calculate and disappear.Axes is a plural form of axis.</li>
+<li>array can do $(n,m) \times m$ ,but matrix can do $(n,m) \times (m,k)$</li>
+</ul>
+<h2 id="refferal">Refferal<a class="headerlink" href="#refferal" title="Permanent link">&para;</a></h2>
+<p><a href="https://numpy.org/doc/1.18/user/index.html">Numpy 1.18 doc</a></p>
                 
                   
                 
@@ -693,13 +866,13 @@
           </a>
         
         
-          <a href="../sklearn/" title="Sklearn" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../pandas/" title="Pandas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Sklearn
+                Pandas
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#feature-selection" tabindex="0" class="md-skip">
+      <a href="#dataset-transformations" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -307,6 +307,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../pandas/" title="Pandas" class="md-nav__link">
+      Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -332,8 +344,84 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#dataset-transformations" class="md-nav__link">
+    Dataset transformations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipelines-and-composite-estimators" class="md-nav__link">
+    Pipelines and composite estimators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-extraction" class="md-nav__link">
+    Feature extraction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessing-data" class="md-nav__link">
+    Preprocessing data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imputation-of-missing-values" class="md-nav__link">
+    Imputation of missing values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsupervised-dimensionality-reduction" class="md-nav__link">
+    Unsupervised dimensionality reduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pairwise-metrics-affinities-and-kernels" class="md-nav__link">
+    Pairwise metrics, Affinities and Kernels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#feature-selection" class="md-nav__link">
     Feature selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection" class="md-nav__link">
+    Model selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referral" class="md-nav__link">
+    Referral
   </a>
   
 </li>
@@ -589,8 +677,84 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#dataset-transformations" class="md-nav__link">
+    Dataset transformations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipelines-and-composite-estimators" class="md-nav__link">
+    Pipelines and composite estimators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-extraction" class="md-nav__link">
+    Feature extraction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessing-data" class="md-nav__link">
+    Preprocessing data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imputation-of-missing-values" class="md-nav__link">
+    Imputation of missing values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsupervised-dimensionality-reduction" class="md-nav__link">
+    Unsupervised dimensionality reduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pairwise-metrics-affinities-and-kernels" class="md-nav__link">
+    Pairwise metrics, Affinities and Kernels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#feature-selection" class="md-nav__link">
     Feature selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection" class="md-nav__link">
+    Model selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referral" class="md-nav__link">
+    Referral
   </a>
   
 </li>
@@ -614,7 +778,119 @@
                 
                   <h1>Sklearn</h1>
                 
-                <h2 id="feature-selection">Feature selection<a class="headerlink" href="#feature-selection" title="Permanent link">&para;</a></h2>
+                <h2 id="dataset-transformations">Dataset transformations<a class="headerlink" href="#dataset-transformations" title="Permanent link">&para;</a></h2>
+<h3 id="pipelines-and-composite-estimators">Pipelines and composite estimators<a class="headerlink" href="#pipelines-and-composite-estimators" title="Permanent link">&para;</a></h3>
+<p>Use pipeline to combine multiple transformer and estimator.Step and parameter can be set use <code>set_params</code> method.If cache is need, can set with <code>memory=cachedir</code></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+
+<span class="n">cachefile</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mktemp</span><span class="p">()</span>
+
+<span class="n">pipe</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;std&quot;</span><span class="p">,</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">StandardScaler</span><span class="p">()),</span>
+        <span class="p">(</span><span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="n">RandomForestRegressor</span><span class="p">())</span>
+    <span class="p">],</span>
+    <span class="n">memory</span><span class="o">=</span><span class="n">cachefile</span>
+<span class="p">)</span>
+<span class="n">pipe</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="n">std</span><span class="o">=</span><span class="s1">&#39;passthrough&#39;</span><span class="p">,</span> <span class="n">model__min_samples_split</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">pipe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">xr</span><span class="p">,</span> <span class="n">yr</span><span class="p">)</span>
+<span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xt</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>FeatureUnion combines several transformer objects into a new transformer that combines their output.</p>
+<p>ColumnTransformer helps performing different transformations for different columns of the data.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">)</span>
+
+<span class="n">columnsTrans</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;std&quot;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">(),</span> <span class="p">[</span><span class="s2">&quot;alcohol&quot;</span><span class="p">]),</span>
+        <span class="p">(</span><span class="s2">&quot;quant&quot;</span><span class="p">,</span> <span class="n">QuantileTransformer</span><span class="p">(</span><span class="n">n_quantiles</span><span class="o">=</span><span class="mi">100</span><span class="p">),</span> <span class="p">[</span><span class="s2">&quot;malic_acid&quot;</span><span class="p">]),</span>
+    <span class="p">],</span>
+    <span class="n">remainder</span><span class="o">=</span><span class="s2">&quot;passthrough&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">columnsTrans</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h3 id="feature-extraction">Feature extraction<a class="headerlink" href="#feature-extraction" title="Permanent link">&para;</a></h3>
+<p>Import</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.feature_extraction</span> <span class="kn">import</span> <span class="n">DictVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction</span> <span class="kn">import</span> <span class="n">image</span>
+</code></pre></div>
+
+
+<p>Sklearn has some useful implement in NLP.</p>
+<h3 id="preprocessing-data">Preprocessing data<a class="headerlink" href="#preprocessing-data" title="Permanent link">&para;</a></h3>
+<p>Import</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">QuantileTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">PowerTransformer</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">Normalizer</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OrdinalEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">KBinsDiscretizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">Binarizer</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">PolynomialFeatures</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">FunctionTransformer</span>
+</code></pre></div>
+
+
+<h3 id="imputation-of-missing-values">Imputation of missing values<a class="headerlink" href="#imputation-of-missing-values" title="Permanent link">&para;</a></h3>
+<p>Simple inputer with many strategy:'mean','median', 'most_frequent', 'constant'</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+<span class="n">imp</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X1</span><span class="p">)</span>
+<span class="n">imp</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X2</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h3 id="unsupervised-dimensionality-reduction">Unsupervised dimensionality reduction<a class="headerlink" href="#unsupervised-dimensionality-reduction" title="Permanent link">&para;</a></h3>
+<p>Imports</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">FeatureAgglomeration</span>
+</code></pre></div>
+
+
+<h3 id="pairwise-metrics-affinities-and-kernels">Pairwise metrics, Affinities and Kernels<a class="headerlink" href="#pairwise-metrics-affinities-and-kernels" title="Permanent link">&para;</a></h3>
+<p>Pairwise metrics</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">pairwise_distances</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">pairwise_kernels</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">pairwise_distances</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;manhattan&#39;</span><span class="p">)</span>
+<span class="n">pairwise_distances</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;manhattan&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h2>
+<p>Import models</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+</code></pre></div>
+
+
+<h2 id="feature-selection">Feature selection<a class="headerlink" href="#feature-selection" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">feature_selection</span>
 
 <span class="n">fs</span> <span class="o">=</span> <span class="n">feature_selection</span><span class="o">.</span><span class="n">SelectPercentile</span><span class="p">(</span><span class="n">feature_selection</span><span class="o">.</span><span class="n">chi2</span><span class="p">,</span><span class="n">percentile</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
@@ -629,6 +905,70 @@
 <li>SelectPercentile</li>
 <li>SelectKBest</li>
 <li>RFECV: feature_selection.RFECV(estimator=classifier,step=1,cv=10,scoring='accuracy')</li>
+</ul>
+<h2 id="model-selection">Model selection<a class="headerlink" href="#model-selection" title="Permanent link">&para;</a></h2>
+<p>Cross-validation</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;f1_macro&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+
+
+<p>Cross-valid wiht multiple metrics and detailed result.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_validate</span>
+
+<span class="n">scores</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">scoring</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Iterators which can be set in <code>cv</code> parameter in Cross validation.If there are groups in sample which need to place at some set, can set <code>groups</code> parameter in iterrators.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RepeatedKFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">LeaveOneOut</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">TimeSeriesSplit</span>
+</code></pre></div>
+
+
+<p>Gridsearch</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;para1&#39;</span><span class="p">:(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">),</span> <span class="s1">&#39;para2&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="nb">sorted</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Scoreing metircs.Dummy estimators are useful to get a baseline value of those metrics for random predictions.Common score metrics:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># for classify</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">balanced_accuracy_score</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">f1_score</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">precision_score</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">recall_score</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">roc_auc_score</span>
+
+<span class="c1"># fot cluster</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">adjusted_mutual_info_score</span>
+
+<span class="c1"># for regression</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">r2_score</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">explained_variance_score</span>
+</code></pre></div>
+
+
+<p>Use learning to compare sample size vs scores</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">validation_curve</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">learning_curve</span>
+</code></pre></div>
+
+
+<h2 id="referral">Referral<a class="headerlink" href="#referral" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://scikit-learn.org/stable/data_transforms.html">Sklearn User guide</a></li>
 </ul>
                 
                   
@@ -651,7 +991,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../numpy/" title="Numpy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../pandas/" title="Pandas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -660,7 +1000,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Numpy
+                Pandas
               </span>
             </div>
           </a>

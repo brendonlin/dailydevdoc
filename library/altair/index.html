@@ -360,6 +360,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#sample" class="md-nav__link">
+    Sample
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#encoding" class="md-nav__link">
     Encoding
   </a>
@@ -374,9 +381,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interactiveselection" class="md-nav__link">
-    Interactive:Selection
+  <a href="#interactive" class="md-nav__link">
+    Interactive
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-init-a-selection-event" class="md-nav__link">
+    1. Init a selection == event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-selection-and-set-condition" class="md-nav__link">
+    2. Add selection and set condition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -417,6 +464,13 @@
         <li class="md-nav__item">
   <a href="#multi-chart-drawing" class="md-nav__link">
     Multi-chart drawing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
   </a>
   
 </li>
@@ -662,6 +716,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#sample" class="md-nav__link">
+    Sample
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#encoding" class="md-nav__link">
     Encoding
   </a>
@@ -676,9 +737,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interactiveselection" class="md-nav__link">
-    Interactive:Selection
+  <a href="#interactive" class="md-nav__link">
+    Interactive
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-init-a-selection-event" class="md-nav__link">
+    1. Init a selection == event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-selection-and-set-condition" class="md-nav__link">
+    2. Add selection and set condition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -723,6 +824,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
       
       
       
@@ -741,7 +849,8 @@
                 
                 
                 <h1 id="altair">Altair<a class="headerlink" href="#altair" title="Permanent link">&para;</a></h1>
-<p>Sample</p>
+<p>Drawing Library with interactive function.</p>
+<h2 id="sample">Sample<a class="headerlink" href="#sample" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -759,33 +868,27 @@
 <p><a href="https://altair-viz.github.io/user_guide/encoding.html">Encoding</a></p>
 <p>Encoding Channels:</p>
 <ul>
-<li>Position Channels: x,y,x2,y2</li>
-<li>Mark Property Channels: color,fillopacity,size,shape</li>
-<li>Text and Tooltip Channels: text</li>
-<li>Hyperlink Channel: href</li>
-<li>Level of Detail Channel: detail</li>
-<li>Order Channel: order</li>
-<li>Facet Channels: column, row</li>
+<li>Position: x, y, x2, y2</li>
+<li>Mark Property: color, fillopacity, size, shape</li>
+<li>Text and Tooltip: text</li>
+<li>Hyperlink: href</li>
+<li>Level of Detail: detail</li>
+<li>Order: order</li>
+<li>Facet: column, row</li>
 </ul>
 <p>And some encoding can detailed defined by using options ,like:</p>
 <ul>
 <li><code>alt.X("xx",aggregate="sum")</code> == <code>x="sum(xx)"</code></li>
 <li><code>alt.X("xx",bin=True)</code></li>
 </ul>
-<p>Two gramma to define encoding:</p>
+<p>Encoding data types:</p>
 <ul>
-<li><code>x="name:Q"</code></li>
-<li><code>alt.X('name', type='quantitative')</code></li>
+<li>Q:quantitative</li>
+<li>O:ordinal</li>
+<li>N:nominal</li>
+<li>T:temporal, time or date</li>
+<li>G:geojson</li>
 </ul>
-<p>Support binning and aggregation like in database.For example</p>
-<div class="codehilite"><pre><span></span><code><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Horsepower&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Miles_per_Gallon&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">size</span><span class="o">=</span><span class="s1">&#39;count()&#39;</span><span class="p">,</span>
-<span class="p">)</span>
-</code></pre></div>
-
-
 <p>Different data properties will make color represent in different ways</p>
 <div class="codehilite"><pre><span></span><code><span class="n">base</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Horsepower:Q&#39;</span><span class="p">,</span>
@@ -812,29 +915,34 @@
 <li>mark_point</li>
 <li>mark_rect</li>
 </ul>
-<p>Mark supports add attributes.</p>
-<h2 id="interactiveselection">Interactive:Selection<a class="headerlink" href="#interactiveselection" title="Permanent link">&para;</a></h2>
-<p>When selection is added to chart, <code>alt.condition</code> will make changes based on events</p>
+<h2 id="interactive">Interactive<a class="headerlink" href="#interactive" title="Permanent link">&para;</a></h2>
+<h3 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
+<h4 id="1-init-a-selection-event">1. Init a selection == event<a class="headerlink" href="#1-init-a-selection-event" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">select</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_interval</span><span class="p">(</span><span class="n">encodings</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+
 <p>Three type selection:</p>
 <ul>
 <li><code>alt.selection_interval</code></li>
 <li><code>alt.selection_single</code></li>
 <li><code>alt.selection_multi</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">brush</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_interval</span><span class="p">(</span><span class="n">encodings</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
-
-<span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+<h4 id="2-add-selection-and-set-condition">2. Add selection and set condition<a class="headerlink" href="#2-add-selection-and-set-condition" title="Permanent link">&para;</a></h4>
+<p>When selection is added to chart, <code>alt.condition</code> will make changes based on events</p>
+<div class="codehilite"><pre><span></span><code><span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Horsepower:Q&#39;</span><span class="p">,</span>
-    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">brush</span><span class="p">,</span> <span class="s1">&#39;Origin:N&#39;</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">select</span><span class="p">,</span> <span class="s1">&#39;Origin:N&#39;</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
     <span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span>
     <span class="n">height</span><span class="o">=</span><span class="mi">250</span>
 <span class="p">)</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
-    <span class="n">brush</span>
+    <span class="n">select</span>
 <span class="p">)</span>
 </code></pre></div>
 
 
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <p>Selection can set fields to make selection at legend of chart.</p>
 <div class="codehilite"><pre><span></span><code><span class="n">selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Origin&#39;</span><span class="p">])</span>
 <span class="n">color</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span>
@@ -936,6 +1044,31 @@
 
 <h2 id="multi-chart-drawing">Multi-chart drawing<a class="headerlink" href="#multi-chart-drawing" title="Permanent link">&para;</a></h2>
 <p><code>alt.concat()</code> and <code>alt.vconcat()</code></p>
+<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<p>Sort</p>
+<div class="codehilite"><pre><span></span><code><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;sum(yield):Q&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;site:N&#39;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;-x&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Bin</p>
+<div class="codehilite"><pre><span></span><code><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">my_numbers_df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;Integers&quot;</span><span class="p">,</span> <span class="nb">bin</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Bin</span><span class="p">(</span><span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)),</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;count()&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Multi Seires</p>
+<div class="codehilite"><pre><span></span><code><span class="n">chart_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;index&quot;</span><span class="p">],</span> <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;cate&quot;</span><span class="p">)</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">chart_data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;cate&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
                 
                   
                 

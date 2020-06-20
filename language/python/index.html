@@ -402,6 +402,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#excule-and-clean" class="md-nav__link">
+    Excule and Clean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#upload-package" class="md-nav__link">
     Upload package
   </a>
@@ -970,6 +977,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#excule-and-clean" class="md-nav__link">
+    Excule and Clean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#upload-package" class="md-nav__link">
     Upload package
   </a>
@@ -1220,6 +1234,17 @@ readme.md
 <div class="codehilite"><pre><span></span><code>pip install -U setuptools wheel
 python setup.py sdist bdist_wheel
 <span class="c1"># Then two file will found under `dist/`,with two file formats: tar.gz and wheel.The latter one being the more preferred format for the new pip.</span>
+</code></pre></div>
+
+
+<h4 id="excule-and-clean">Excule and Clean<a class="headerlink" href="#excule-and-clean" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>setup(
+    packages=find_packages(exclude=[&quot;tests&quot;]),
+)
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>python setup.py clean --all bdist_wheel
 </code></pre></div>
 
 
